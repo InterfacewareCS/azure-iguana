@@ -18,7 +18,7 @@ configuration ConfigureIguanaDsc
         [String]$fhirUrl,
 
         [Parameter(Mandatory=$false)]
-        [String]$downloadLink = "https://bitbucket.org/interfaceware/microsoft-fhir-poc/downloads/Iguana.zip"
+        [String]$downloadLink = "https://raw.githubusercontent.com/interfacewarecs/iguana-azure-fhir/master/DSC/Iguana.zip"
     )
     
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
