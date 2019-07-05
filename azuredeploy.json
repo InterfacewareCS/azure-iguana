@@ -66,7 +66,7 @@
         "vnetName": "[concat(parameters('vmName'),'-vnet')]",
         "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('vnetName'))]",
         "subnetId": "[concat(variables('vnetId'), '/subnets/default')]",
-        "IguanaConfigureModuleURL": "https://raw.githubusercontent.com/hansenms/azure-iguana/master/DSC/ConfigureIguana.ps1.zip",
+        "IguanaConfigureModuleURL": "https://raw.githubusercontent.com/interfacewarecs/iguana-azure-fhir/master/DSC/ConfigureIguana.ps1.zip",
         "IguanaConfigureFunction": "ConfigureIguana.ps1\\ConfigureIguanaDsc",
         "aadTenant": "[last(split(parameters('aadAuthority'),'/'))]",
         "aadAudience": "[if(empty(parameters('aadAudience')),parameters('fhirServerUrl'),parameters('aadAudience'))]"
