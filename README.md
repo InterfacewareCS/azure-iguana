@@ -30,7 +30,8 @@ This template requires a FHIR Server to complete the overall workflow. To set up
 - Aad Service Client Id
 - Aad Service Client Secret
 - Aad Authority
-- FHIR Server Url
+- Aad Audience (If not specified, this is also the FHIR Server URL)
+- FHIR Server URL
 
 This information will be needed to be passed into the deployment template.
 
