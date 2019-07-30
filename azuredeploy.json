@@ -13,7 +13,7 @@
         },
         "vmSize": {
             "type": "string",
-            "defaultValue": "Standard_D2_v2"
+            "defaultValue": "Basic_A2"
         },
         "imagePublisher": {
             "type": "string",
