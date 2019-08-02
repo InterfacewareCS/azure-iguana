@@ -10,7 +10,7 @@ This repository contains an Azure ARM Template that is able to deploy a virtual 
 - **Azure Template on Github**: Azure template assists the user with a click of the <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Finterfacewarecs%2Figuana-azure-fhir%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="https://azuredeploy.net/deploybutton.png"/>
 </a> button or via powershell to auto provision the Azure VM and Iguana installation 
-- **Azure**: Cloud infrastructure that hosts the HL7 to FHIR POC
+- **Azure**: Cloud infrastructure that hosts the HL7 to FHIR POC (proof of concept)
 - **Azure AD**: Azure Active Directory that provides secure access to Azure API services
 - **Azure API for FHIR**: FHIR server with data storage that provides API access
 - **FHIR Dashboard**: Web dashboard that displays patient demographics information from FHIR server
