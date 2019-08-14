@@ -16,7 +16,7 @@ This repository contains an Azure ARM Template that is able to deploy a virtual 
 - **FHIR Dashboard**: Web dashboard that displays patient demographics information from FHIR server
 - **Azure VM for Iguana**: Azure virtual machine that hosts the Iguana application for converting HL7 v2 (ADT) messages to FHIR patient resources. The VM OS will be Windows Server 2016.
 
-<center><img src="https://raw.githubusercontent.com/InterfacewareCS/iguana-azure-fhir/master/Diagram.png" width="512"></center>
+<center><img src="https://raw.githubusercontent.com/InterfacewareCS/iguana-azure-fhir/master/DesignDiagram.png" width="512"></center>
 
 #### Workflow
 1. Iguana sends client id and client secret to Azure AD to be authenticated
