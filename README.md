@@ -28,11 +28,11 @@ This repository contains an Azure ARM Template that is able to deploy a virtual 
 
 This template requires a FHIR Server to complete the overall workflow. To set up a sandbox environment with Azure API for FHIR, web client, etc., deploy the [Microsoft/fhir-server-samples](https://github.com/Microsoft/fhir-server-samples) scenario and collect the following information from the script and Azure keyvault secrets:
 
-- Aad Service Client Id
-- Aad Service Client Secret
-- Aad Authority
-- Aad Audience (If not specified, this is also the FHIR Server URL)
-- FHIR Server URL
+- **Aad Service Client Id:** The service id of the FHIR Server resource.
+- **Aad Service Client Secret:** The service secret of the FHIR Server resource.
+- **Aad Authority:** The authenticating link used for applications to connect to your domain. ex `https://login.microsoftonline.com/interfaceware.com` or `https://login.microsoftonline.com/interfaceware.onmicrosoft.com`
+- **Aad Audience:** Unless this differs, this will typically be the FHIR server URL in the format: `https://<AZURE API FOR FHIR NAME>.azurehealthcareapis.com`
+- **FHIR Server URL:** The FHIR Server URL. ex `[https://<AZURE API FOR FHIR NAME>.azurehealthcareapis.com]`
 
 This information will be needed to be passed into the deployment template.
 
@@ -90,6 +90,16 @@ New-AzureRmResourceGroupDeployment -TemplateUri https://raw.githubusercontent.co
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Finterfacewarecs%2Figuana-azure-fhir%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="https://azuredeploy.net/deploybutton.png"/>
 </a>
+
+#### Deployment considerations
+
+An important consideration to note is that depending on the type of Azure resource group chosen, **deploying the ARM template may take 5-10 minutes to fully complete.** Accessing the virtual machine before completion may cancel the Iguana provisioning process.
+
+<center><img src="https://raw.githubusercontent.com/InterfacewareCS/iguana-azure-fhir/master/images/Deploying.png" width="384"></center>
+
+It is important to **make sure that the deployment is complete** before accessing the virtual machine.
+
+<center><img src="https://raw.githubusercontent.com/InterfacewareCS/iguana-azure-fhir/master/images/Success.png" width="384"></center>
 
 # After Deployment
 
