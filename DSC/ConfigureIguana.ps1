@@ -31,8 +31,8 @@ configuration ConfigureIguanaDsc
     $installDir = 'C:\Program Files'
     $FHIRsrc = $installDir + '\Iguana\FHIR'
     $FHIRdir = 'C:\'
-    $Appdir = 'Iguana\ApplicationDir\6.1.2\iNTERFACEWARE-Iguana'
-    $script = $installDir + '\Iguana\ApplicationDir\6.1.2\iNTERFACEWARE-Iguana\start-iguana_service.bat'
+    $Appdir = 'Iguana\ApplicationDir\6.1.4\iNTERFACEWARE-Iguana'
+    $script = $installDir + '\Iguana\ApplicationDir\6.1.4\iNTERFACEWARE-Iguana\start-iguana_service.bat'
     $workingDir = $installDir + '\Iguana\WorkingDir'
     $iguanaEnv = $workingDir + '\IguanaEnv.txt'
 
@@ -116,7 +116,7 @@ configuration ConfigureIguanaDsc
                 return @{ 'Result' = $true }
             }
             SetScript = {
-                Get-Service "iNTERFACEWARE-Iguana 6.1.2" | Where-Object {$_.status -eq "Stopped"} | Start-Service            
+                Get-Service "iNTERFACEWARE-Iguana 6.1.4" | Where-Object {$_.status -eq "Stopped"} | Start-Service            
             }
             TestScript = {
                 return $false
